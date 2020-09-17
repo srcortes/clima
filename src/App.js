@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import Header from './Components/Header'
 
 
 function App() {
   return (
-    <h1>Weather in ReactJS</h1>
+    <Fragment>
+       <Header
+          titulo='Weather Clima App'
+       />
+    </Fragment>
   );
 }
 
