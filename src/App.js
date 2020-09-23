@@ -21,10 +21,11 @@ function App() {
   //useEffect cuando cambien los valores ciudad y pais se actualiza lo que este dentro del useEffect
   useEffect(() => {
     const consultarApi = async () => {
-      if (consultar) {
+      
+      if (consultar) {       
         //Se inicia construccion o invocacion servicio
         const appId = "ad019f1cbc0512a31d256fc69ffe56d4";
-        const urlConsumo = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
+        const urlConsumo = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`;
 
         const respuesta = await fetch(urlConsumo);
         const resultado = await respuesta.json();
@@ -36,6 +37,7 @@ function App() {
       }
     };
     consultarApi();
+    //eslint-disable-next-line
   }, [consultar]);
 
   let componente;
